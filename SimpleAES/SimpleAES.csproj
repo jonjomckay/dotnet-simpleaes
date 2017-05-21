@@ -1,8 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFrameworks>netstandard1.3;net45</TargetFrameworks>
+    <Version>1.1.1</Version>
+    <Description>A straight-up transliteration of Simple-AES256 from VB to C# for ease of use inside .NET Core applications that gives an easy wrapper to encrypt and decrypt using AES256</Description>
+    <PackageProjectUrl>https://github.com/jonjomckay/dotnet-simpleaes</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/jonjomckay/dotnet-simpleaes/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/jonjomckay/dotnet-simpleaes</RepositoryUrl>
   </PropertyGroup>
-  <ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
     <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
   </ItemGroup>
 </Project>
