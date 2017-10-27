@@ -6,6 +6,16 @@ SimpleAES
 This library is a straight-up transliteration of [Simple-AES256](https://github.com/ChazSII/Simple-AES256) from VB 
 to C# for ease of use inside .NET Core applications.
 
+## Usage
+
+### Encrypting
+
+To encrypt, simply call `SimpleAES.AES256.Encrypt(textToEncrypt, key)` and it will return you a Base64-encoded value that contains the salt, IV and cipher text.
+
+### Decrypting
+
+To decrypt, call `SimpleAES.AES256.Decrypt(encryptedContent, key)` and the original string value will be returned.
+
 ## Contributing
 
 Contributions are welcome to the project - whether they are feature requests, improvements or bug fixes! Refer to
